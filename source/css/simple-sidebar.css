@@ -120,3 +120,6 @@ footer.footer {
   margin-left: 20px;
 }
 
+.img-responsive {
+    margin: 0 auto;
+}

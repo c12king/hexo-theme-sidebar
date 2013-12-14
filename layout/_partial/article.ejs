@@ -48,15 +48,14 @@
       <% if (item.photos){ %>
         <%- partial('post/gallery') %>
       <% } %>
-
       <%- partial('post/title') %>
-
+    </div>
+    <div class="entry page-content inset ">
       <% if (item.layout != 'page'){ %>
         <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
         <div class="icon"></div>
-      <% } %>
-    </div>
-    <div class="entry page-content inset ">
+      <% } %> <br />
+
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
       <% } else { %>

@@ -1,6 +1,6 @@
 # sidebar
 
-Another theme for [Hexo].
+Another theme for [Hexo]. Forked from the default theme light.
 
 ## Install
 
