@@ -1,0 +1,9 @@
+<ul id="pagination" class="pagination pull-right">
+  <% if (page.prev){ %>
+    <li><a href="<%- config.root %><%- page.prev_link %>" class="alignleft prev"><%= __('prev') %></a></li>
+  <% } %>
+  <% if (page.next){ %>
+    <li><a href="<%- config.root %><%- page.next_link %>" class="alignright next"><%= __('next') %></a></li>
+  <% } %>
+  <div class="clearfix"></div>
+</ul>

@@ -1,0 +1,7 @@
+<% if (site.tags.length){ %>
+    <!-- <lead class="title text-center"><%= __('tags') %></lead> -->
+    <% site.tags.sort('name').each(function(item){ %>
+      <a href="<%- config.root %><%- item.path %>"><%= item.name %>
+      <span class="badge"> <%= item.posts.length %> </span></a>
+    <% }); %>
+<% } %>

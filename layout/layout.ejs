@@ -1,0 +1,32 @@
+<%- partial('_partial/head') %>
+<body>
+
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav nav text-center">
+      <%- partial('_partial/header') %>
+    </ul>
+
+    <div class="text-center">
+    <%- partial('_partial/sidebar') %>
+
+    <%- partial('_partial/footer') %>
+    </div>
+  </div>
+
+  <!-- Page content -->
+  <div id="page-content-wrapper">
+    <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+
+    <%- body %>
+
+
+  </div>
+
+  <%- partial('_partial/after_footer') %>
+</div>
+
+</body>
+</html>

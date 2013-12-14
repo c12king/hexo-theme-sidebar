@@ -1,0 +1,81 @@
+<% if (index){ %>
+
+  <article class="<%= item.layout %>">
+    <% if (item.photos){ %>
+      <%- partial('post/gallery') %>
+    <% } %>
+    <div class="post-content">
+      <header>
+        <% if (item.layout != 'page'){ %>
+          <div class="icon"></div>
+          <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <% } %>
+        <%- partial('post/title') %>
+      </header>
+      <div class="entry">
+        <% if (item.excerpt && index){ %>
+          <%- item.excerpt %>
+        <% } else { %>
+          <%- item.content %>
+        <% } %>
+      </div>
+      <footer>
+        <% if (index){ %>
+          <% if (item.excerpt){ %>
+            <div class="alignleft">
+              <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+            </div>
+          <% } %>
+          <% if (item.comments && config.disqus_shortname){ %>
+          <div class="text-right">
+            <!-- <span class="badge"> </span> -->
+            <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+          </div>
+          <% } %>
+        <% } %>
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+  </article>
+
+  <%- partial('comment') %>
+
+
+<% } else { %>
+
+
+    <div class="content-header ">
+      <% if (item.photos){ %>
+        <%- partial('post/gallery') %>
+      <% } %>
+
+      <%- partial('post/title') %>
+
+      <% if (item.layout != 'page'){ %>
+        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <div class="icon"></div>
+      <% } %>
+    </div>
+    <div class="entry page-content inset ">
+      <% if (item.excerpt && index){ %>
+        <%- item.excerpt %>
+      <% } else { %>
+        <%- item.content %>
+      <% } %>
+      <footer>
+        <% if (item.comments){ %>
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
+          <%- partial('post/share') %>
+        <% } %>
+
+        <div class="clearfix"></div>
+      </footer>
+
+
+      <%- partial('comment') %>
+
+    </div>
+
+
+<% } %>

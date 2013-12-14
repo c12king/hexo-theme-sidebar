@@ -1,0 +1,9 @@
+<div class="page-content inset">
+  <% page.posts.each(function(item){ %>
+    <%- partial('_partial/article', {item: item, index: true}) %>
+  <% }); %>
+
+  <%- partial('_partial/pagination') %>
+</div>
+
+
