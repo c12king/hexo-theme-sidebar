@@ -36,4 +36,4 @@ facebook:
   appid: 123456789012345
   comment_count: 5
   comment_width: 840
-  comment_colorscheme: pure
+  comment_colorscheme: sidebar
