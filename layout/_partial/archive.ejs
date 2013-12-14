@@ -13,26 +13,27 @@ if (page.archive){
 
 
 <div class="archive page-content inset">
-  <ul class=" nav nav-stacked">
+<div class="table-responsive">
+  <table class="posts table table-hover borderless">
     <% page.posts.each(function(item){ %>
-      <li>
+      <tr>
         <% if (item.link){ %>
           <% if (item.title){ %>
-            <a href="<%- item.link %>" target="_blank"><%= item.title %>
+            <td><a href="<%- item.link %>" target="_blank"><%= item.title %></a></td>
           <% } else { %>
-            <a class="title link"><a href="<%- item.link %>" target="_blank"><%= item.link %>
+            <td><a class="title link" href="<%- item.link %>" target="_blank"><%= item.link %></a></td>
           <% } %>
         <% } else { %>
-          <a href="<%- config.root %><%- item.path %>"><%= item.title %>
+          <td><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></td>
         <% } %>
 
-        <small class="datetime text-muted" datetime="<%= item.date.toDate().toISOString() %>"> <%= item.date.format(config.date_format) %></small>
+        <td class="text-right"><time class="datetime text-muted" datetime="<%= item.date.toDate().toISOString() %>"> <%= item.date.format(config.date_format) %></time></td>
 
-        </a>
-      </li>
+
+      </tr>
 
     <% }); %>
-  </ul>
-
+  </table>
+</div>
   <%- partial('pagination') %>
 </div>

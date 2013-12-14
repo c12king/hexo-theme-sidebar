@@ -73,7 +73,8 @@
 .content-header h1 {
   margin: 0;
   margin-left: 20px;
-  line-height: 65px;
+  padding-top: 20px;
+  /*line-height: 65px;*/
   display: inline-block;
 }
 
@@ -84,6 +85,19 @@
 .inset {
   padding: 20px;
 }
+
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+.borderless tbody tr td
+{
+  border:none;
+  border-top:none
+}
+
+
 
 @media (max-width:767px) {
 
@@ -114,12 +128,11 @@
   padding: 15px;
 }
 
+h1,h2,h3 {
+  font-size: 17.5px
 }
+h4 {
+  font-size: 14px;
 
-footer.footer {
-  margin-left: 20px;
 }
-
-.img-responsive {
-    margin: 0 auto;
 }
