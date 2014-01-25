@@ -2,14 +2,14 @@
 
 Another theme for [Hexo]. Forked from the default theme light.
 
-[demo](http://www.wuinm.com)
+[demo](http://wuinm.com/hexo-theme-sidebar/)
 
 ## Install
 
 Execute the following command and modify `theme` in `_config.yml` to `sidebar`.
 
 ```
-git clone git://github.com/tommy351/hexo-theme-sidebar.git themes/sidebar
+git clone git://github.com/hardywu/hexo-theme-sidebar.git themes/sidebar
 ```
 
 ## Update
